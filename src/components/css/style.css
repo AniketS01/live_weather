@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  font-family: Roboto, sans-serif;
+  padding: 1rem;
+  font-size: 1.3rem;
+  background: #343a40;
+  color: #DFDFDF;
+  border-bottom: 1.5px solid Dodgerblue;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction:column;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.input {
+  border: 1px solid #BFBFBF;
+  margin-top:1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
+}
+
+.form {
+  padding-right: 2rem;
+  font-family: Roboto, sans-serif;
+}
+
+.btn {
+  border: none;
+  padding: 0.5rem;
+  background: #5499C7;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  margin-left:1rem;
+}
+
+.box {
+  height: 100vh;
+}
+.box-inner {
+  font-family: Roboto, sans-serif;
+  padding-top: 7rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.x-large{
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large{
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.img{
+  height:5rem;
+  width:5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
