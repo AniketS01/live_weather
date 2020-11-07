@@ -22,7 +22,7 @@ import axios from 'axios'
 
     handleSubmit = (event) => {
         event.preventDefault()
-        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&units=metric&appid={api_key}`)
+        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&units=metric&appid=f36cb4ea6488e901f8a7de7969c7f179`)
         .then(res => {
         this.setState({
             data:res.data,
@@ -32,7 +32,8 @@ import axios from 'axios'
             sys:res.data.sys
         })})
         .catch(err => alert('please enter a valid city name'))
-        
+
+
     }
 
     render() {
@@ -45,7 +46,7 @@ import axios from 'axios'
                         <input type="submit" className="btn" value="Search"/>
                     </form>
                 </nav>
-                <div className="box">
+                {(this.state.data.length!=0) ? <div className="box">
                     <div className="box-inner">
                     <h1 className="large">{this.state.data.name}, {this.state.sys.country}</h1>
                         <img className="img" src={this.state.url} alt=''/>
@@ -55,7 +56,7 @@ import axios from 'axios'
                         <h2 className="lead">{this.state.weather.map(i => i.main)}</h2>
                         <h2 className="lead">{this.state.weather.map(i => i.description)}</h2>
                     </div>
-                </div>
+                </div> : <h2 className="large" style={{paddingTop:"15rem", paddingLeft:"22rem"}}>welcome! to live weather</h2>}
             </div>
         )
     }
