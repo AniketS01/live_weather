@@ -22,7 +22,7 @@ import axios from 'axios'
 
     handleSubmit = (event) => {
         event.preventDefault()
-        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&units=metric&appid=f36cb4ea6488e901f8a7de7969c7f179`)
+        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&units=metric&appid=yourapikey`)
         .then(res => {
         this.setState({
             data:res.data,
